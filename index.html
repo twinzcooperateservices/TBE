@@ -9,6 +9,18 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#fff;color:var(--dark)}
 nav{background:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.logo span {
+  color: var(--pink);
+}
 .logo img {
   height: 50px;
   width: auto;
@@ -18,11 +30,9 @@ nav{background:#fff;padding:16px 6%;display:flex;justify-content:space-between;a
   .logo img {
     height: 40px;
   }
-}
-.hero{background:linear-gradient(135deg,#fdf2f8 0%,#fce7f3 100%);padding:80px 6%;text-align:center}
-@media (max-width: 768px) {
-  .logo img {
-    height: 40px;
+  .logo {
+    font-size: 16px;
+    gap: 8px;
   }
 }
 .hero{background:linear-gradient(135deg,#fdf2f8 0%,#fce7f3 100%);padding:80px 6%;text-align:center}
