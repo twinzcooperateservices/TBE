@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-Re8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tsholo's Beauty Enterprise | Hair, Makeup, Nails</title>
 <style>
- .ba-slider{position:relative;width:100%;max-width:400px;margin:auto;overflow:hidden;border-radius:16px}
-.ba-slider img{display:block;width:100%;height:300px;object-fit:cover}
-.ba-handle{position:absolute;top:0;left:50%;width:4px;height:100%;background:#fff;cursor:ew-resize;box-shadow:0 0 10px rgba(0,0,0,0.3)}
-.ba-handle::after{content:'↔';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--pink);color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
-.ba-after{position:absolute;top:0;left:0;width:50%;overflow:hidden;height:100%} 
 :root{--pink:#ec4899;--pink-dark:#db2777;--gold:#fbbf24;--dark:#1f2937}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#fff;color:var(--dark)}
@@ -18,7 +13,7 @@ nav{background:#fff;padding:16px 6%;display:flex;justify-content:space-between;a
 .hero{background:linear-gradient(135deg,#fdf2f8 0%,#fce7f3 100%);padding:80px 6%;text-align:center}
 .hero h1{font-size:42px;color:var(--dark);margin-bottom:16px}
 .hero p{font-size:18px;color:#6b7280;margin-bottom:32px}
-.btn{background:var(--pink);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-block}
+.btn{background:var(--pink);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-block;border:none;cursor:pointer}
 .btn:hover{background:var(--pink-dark);transform:translateY(-2px)}
 .services{padding:80px 6%;background:#fff}
 .services h2{text-align:center;font-size:32px;margin-bottom:48px;color:var(--dark)}
@@ -27,6 +22,15 @@ nav{background:#fff;padding:16px 6%;display:flex;justify-content:space-between;a
 .card:hover{transform:translateY(-8px);box-shadow:0 12px 24px rgba(236,72,153,0.15)}
 .card h3{color:var(--pink);margin-bottom:12px;font-size:20px}
 footer{background:var(--dark);color:#fff;text-align:center;padding:32px 6%;margin-top:80px}
+
+/* Before/After Slider */
+.ba-slider{position:relative;width:100%;max-width:400px;margin:auto;overflow:hidden;border-radius:16px}
+.ba-slider img{display:block;width:100%;height:300px;object-fit:cover}
+.ba-handle{position:absolute;top:0;left:50%;width:4px;height:100%;background:#fff;cursor:ew-resize;box-shadow:0 0 10px rgba(0,0,0,0.3)}
+.ba-handle::after{content:'↔';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--pink);color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ba-after{position:absolute;top:0;left:0;width:50%;overflow:hidden;height:100%}
+.card img{transition:0.4s}
+.card:hover img{transform:scale(1.05)}
 </style>
 </head>
 <body>
@@ -47,39 +51,78 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:32px 6%;margi
     <div class="card">
       <h3>Hair Washing & Relaxing</h3>
       <p>Deep cleanse, treatment & relaxer for healthy, soft hair</p>
+      <a href="https://wa.me/2762453878?text=Hi%20Tsholo's%20Beauty%20Enterprise,%20I%20want%20to%20book%20Hair%20Washing%20%26%20Relaxing" class="btn" style="margin-top:16px;padding:10px 20px;font-size:14px">Book Now</a>
     </div>
     <div class="card">
       <h3>Weaves: Sales & Install</h3>
       <p>100% human hair weaves. Sew-in, glue, frontal installs</p>
+      <a href="https://wa.me/2762453878?text=Hi%20Tsholo's%20Beauty%20Enterprise,%20I%20want%20to%20book%20Weave%20Installation" class="btn" style="margin-top:16px;padding:10px 20px;font-size:14px">Book Now</a>
     </div>
     <div class="card">
       <h3>Professional Makeup</h3>
       <p>Glam for events, weddings, photoshoots & everyday</p>
-    </Ediv>
+      <a href="https://wa.me/2762453878?text=Hi%20Tsholo's%20Beauty%20Enterprise,%20I%20want%20to%20book%20Makeup" class="btn" style="margin-top:16px;padding:10px 20px;font-size:14px">Book Now</a>
+    </div>
     <div class="card">
-     <div>
-  <h3 style="text-align:center;margin-bottom:16px">Nail Art</h3>
-  <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
-    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800" alt="After">
-    <div class="ba-after">
-      <img src="https://images.unsplash.com/photo-1610992013144-788a6231dc22?q=80&w=800" alt="Before">
-    </div>
-    <div class="ba-handle"></div>
-  </div>
-</div>
-
-<div>
-  <h3 style="text-align:center;margin-bottom:16px">Hair Treatment</h3>
-  <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
-    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800" alt="After">
-    <div class="ba-after">
-      <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800" alt="Before">
-    </div>
-    <div class="ba-handle"></div>
-  </div>
-</div>
       <h3>Nails: Sales & Install</h3>
       <p>Acrylics, gel, press-ons. Nail art & maintenance</p>
+      <a href="https://wa.me/2762453878?text=Hi%20Tsholo's%20Beauty%20Enterprise,%20I%20want%20to%20book%20Nails" class="btn" style="margin-top:16px;padding:10px 20px;font-size:14px">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="gallery">
+  <h2>Our Work Gallery</h2>
+  <div class="grid">
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?q=80&w=800&auto=format" alt="Weave Install" style="width:100%;height:250px;object-fit:cover">
+      <div style="padding:20px"><h3>Weave Installation</h3></div>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format" alt="Makeup Glam" style="width:100%;height:250px;object-fit:cover">
+      <div style="padding:20px"><h3>Makeup Glam</h3></div>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format" alt="Nails Art" style="width:100%;height:250px;object-fit:cover">
+      <div style="padding:20px"><h3>Nail Art</h3></div>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format" alt="Hair Treatment" style="width:100%;height:250px;object-fit:cover">
+      <div style="padding:20px"><h3>Hair Treatment</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="beforeafter" style="background:#fdf2f8">
+  <h2>Before & After Transformations</h2>
+  <div class="grid">
+    <div><h3 style="text-align:center;margin-bottom:16px">Weave Install</h3>
+      <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
+        <img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?q=80&w=800" alt="After">
+        <div class="ba-after"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800" alt="Before"></div>
+        <div class="ba-handle"></div>
+      </div>
+    </div>
+    <div><h3 style="text-align:center;margin-bottom:16px">Makeup Glam</h3>
+      <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800" alt="After">
+        <div class="ba-after"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800" alt="Before"></div>
+        <div class="ba-handle"></div>
+      </div>
+    </div>
+    <div><h3 style="text-align:center;margin-bottom:16px">Nail Art</h3>
+      <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800" alt="After">
+        <div class="ba-after"><img src="https://images.unsplash.com/photo-1610992013144-788a6231dc22?q=80&w=800" alt="Before"></div>
+        <div class="ba-handle"></div>
+      </div>
+    </div>
+    <div><h3 style="text-align:center;margin-bottom:16px">Hair Treatment</h3>
+      <div class="ba-slider" onmousemove="slide(event,this)" ontouchmove="slide(event,this)">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800" alt="After">
+        <div class="ba-after"><img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800" alt="Before"></div>
+        <div class="ba-handle"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -88,14 +131,15 @@ footer{background:var(--dark);color:#fff;text-align:center;padding:32px 6%;margi
   <h2>Book Appointment</h2>
   <p style="text-align:center;margin-bottom:24px">Click WhatsApp to book instantly</p>
   <div style="text-align:center">
-    <a href="https://wa.me/+27762453878?text=Hi%20Tshol's%20Beauty%20Enterprise,%20I%20want%20to%20book%20an%20appointment" class="btn">Book on WhatsApp</a>
+    <a href="https://wa.me/2762453878?text=Hi%20Tsholo's%20Beauty%20Enterprise,%20I%20want%20to%20book%20an%20appointment%20for%20" class="btn">Book on WhatsApp</a>
   </div>
 </section>
 
 <footer>
   <p>© 2026 Tsholo's Beauty Enterprise | All rights reserved</p>
 </footer>
- <script>
+
+<script>
 function slide(e, slider){
   let x = e.touches? e.touches[0].clientX : e.clientX;
   let rect = slider.getBoundingClientRect();
